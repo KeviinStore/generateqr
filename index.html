@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rahman Abd Ghani — Web Developer</title>
+  <meta name="description" content="Portfolio dan daftar project Rahman Abd Ghani, web developer freelance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Lewati ke konten</a>
+
+  <header class="top">
+    <a class="brand" href="#/" data-link>Ganx.dev</a>
+    <nav aria-label="Navigasi utama">
+      <a href="#/" data-link data-route="home">Beranda</a>
+      <a href="#/project" data-link data-route="project">Project</a>
+      <span class="nav-ink" aria-hidden="true"></span>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- BERANDA -->
+    <section class="view" data-view="home" hidden>
+      <p class="badge"><span class="dot"></span>Online · terbuka untuk kolaborasi</p>
+      <h1>Website sederhana supaya bisnismu gampang ditemukan dan dihubungi.</h1>
+      <p class="lead">Halo, saya Ghani. Web developer freelance di Banjarmasin. Saya mengerjakan company profile, toko online, dan aplikasi web kecil untuk bisnis yang ingin tampil jelas di internet.</p>
+
+      <div class="actions">
+        <a class="btn primary" href="#/project" data-link>Lihat project</a>
+        <a class="btn" id="waLink" href="#" target="_blank" rel="noopener">Chat via WhatsApp</a>
+      </div>
+
+      <dl class="stats" id="stats"></dl>
+
+      <div class="about">
+        <h2>Cara kerja</h2>
+        <p>Brief singkat dulu, lalu desain sederhana, lalu dibangun dengan HTML, CSS, dan JavaScript tanpa framework berlebih. Hasilnya cepat dibuka di HP dan gampang dirawat setelah serah terima.</p>
+      </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section class="view" data-view="project" hidden>
+      <h1 class="h-page">Project</h1>
+      <p class="lead">Klik salah satu untuk melihat pratinjau langsung tanpa meninggalkan halaman ini.</p>
+      <ul class="grid" id="grid"></ul>
+      <p class="cta-line">Punya kebutuhan serupa? <a id="waLink2" href="#" target="_blank" rel="noopener">Ceritakan lewat WhatsApp</a>.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="year"></span> Rahman Abd Ghani</span>
+    <span>Dibuat dengan HTML, CSS, dan JS murni.</span>
+  </footer>
+
+  <!-- MODAL PREVIEW -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-bar">
+      <div class="modal-info">
+        <strong id="modalTitle"></strong>
+      </div>
+      <div class="modal-actions">
+        <a class="btn small" id="modalOpen" href="#" target="_blank" rel="noopener">Buka Fullscreen</a>
+        <button class="btn small solid" id="modalClose" type="button">Tutup</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="loader" id="loader">Memuat pratinjau…</div>
+      <iframe id="frame" title="Pratinjau project" loading="lazy" referrerpolicy="no-referrer"></iframe>
+      <p class="hint">Pratinjau kosong? Beberapa situs memblokir iframe. Gunakan tombol Buka Fullscreen.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

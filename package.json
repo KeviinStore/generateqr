@@ -1,0 +1,9 @@
+{
+  "name": "ganx-dev-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio Rahman Abd Ghani — static site",
+  "scripts": {
+    "build": "echo 'Static site, no build step'"
+  }
+}
